@@ -6,8 +6,6 @@
 
 package JTree;
 
-import java.rmi.activation.Activatable;
-
 /**
  *
  * @author rai
@@ -15,7 +13,8 @@ import java.rmi.activation.Activatable;
 public class TreeNode {
     private int data;
     private TreeNode leftNode, rightNode;
-
+    private TreeNode parent;
+    
     public TreeNode(int data) {
         this.data=data;
         this.leftNode=rightNode=null;
@@ -63,4 +62,14 @@ public class TreeNode {
             }
         }
     }
+
+    public TreeNode getParent() {
+        return parent;
+    }
+
+    public void setParent(TreeNode parent) {
+        this.parent = parent;
+    }
+    
+    
 }

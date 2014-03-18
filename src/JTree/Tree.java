@@ -13,6 +13,8 @@ public class Tree {
     
     private TreeNode root;
     
+    private TreeNode Succescor, Predeccesor;
+    
     public Tree() {
     }
     
@@ -86,6 +88,38 @@ public class Tree {
             root = new TreeNode(x);
         } else {
             root.insert(x);
+        }
+    }
+
+    public TreeNode getSuccescor() {
+        return Succescor;
+    }
+
+    public void setSuccescor(TreeNode Succescor) {
+        Succescor=Succescor.getRightNode();
+        while(Succescor.getLeftNode()!=null){
+            Succescor=Succescor.getLeftNode();
+        }
+    }
+
+    public TreeNode getPredeccesor() {
+        return Predeccesor;
+    }
+
+    public void setPredeccesor(TreeNode Predeccesor) {
+        Predeccesor=Predeccesor.getLeftNode();
+        while(Predeccesor.getRightNode()!=null){
+            Predeccesor=Predeccesor.getRightNode();
+        }
+    }
+    
+    public void eraseTwoChild(int x){
+        TreeNode bantu=find(x);
+        setPredeccesor(bantu);
+        bantu.setData(getPredeccesor().getData());
+        
+        if (getPredeccesor().getParent()!=bantu) {
+            
         }
     }
 }

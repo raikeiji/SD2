@@ -39,5 +39,7 @@ public class TreeMain {
             System.out.println("Node ditemukan");
         }
         else System.out.println("Node tidak ditemukan");
+        
+        
     }
 }
