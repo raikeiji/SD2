@@ -23,23 +23,24 @@ public class TreeMain {
         t.add(8);
         t.inOrderTraversal();
         System.out.println("");
-        t.postOrderTraversal();
-        System.out.println("");
-        t.preOrderTraversal();
-        System.out.println("");
+//        t.postOrderTraversal();
+//        System.out.println("");
+//        t.preOrderTraversal();
+//        System.out.println("");
         
-        TreeNode hasil=t.find(23);
-        if (hasil!=null) {
-            System.out.println("Node ditemukan");
-        }
-        else System.out.println("Node tidak ditemukan");
+//        TreeNode hasil=t.find(23);
+//        if (hasil!=null) {
+//            System.out.println("Node ditemukan");
+//        }
+//        else System.out.println("Node tidak ditemukan");
+//        
+//        hasil=t.find(9);
+//        if (hasil!=null) {
+//            System.out.println("Node ditemukan");
+//        }
+//        else System.out.println("Node tidak ditemukan");
         
-        hasil=t.find(9);
-        if (hasil!=null) {
-            System.out.println("Node ditemukan");
-        }
-        else System.out.println("Node tidak ditemukan");
-        
-        
+        t.remove(32);
+        t.inOrderTraversal();
     }
 }

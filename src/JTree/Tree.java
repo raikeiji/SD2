@@ -122,4 +122,51 @@ public class Tree {
             
         }
     }
+    
+    public TreeNode remove(int x){
+        TreeNode bantu=find(x);
+       
+        if (bantu==null) {
+            return null;
+        }
+        else{
+            if (bantu.getData()==root.getData()) {
+                if (bantu.getLeftNode()==null && bantu.getRightNode()==null) {
+                    root=null;
+                }
+                else if(bantu.getRightNode()==null){
+                    root=bantu.getLeftNode();
+                }
+                else if(bantu.getLeftNode()==null){
+                    root=bantu.getRightNode();
+                }
+            }
+            else{
+                TreeNode parent=bantu.getParent(); 
+                if (x<parent.getData()) {
+                    if (bantu.getLeftNode()==null && bantu.getRightNode()==null) {
+                        parent.setLeftNode(null);
+                    }
+                    else if(bantu.getRightNode()==null){
+                        parent.setLeftNode(bantu.getLeftNode());
+                    }
+                    else if(bantu.getLeftNode()==null){
+                        parent.setLeftNode(bantu.getRightNode());
+                    }
+                }
+                else{
+                    if (bantu.getLeftNode()==null && bantu.getRightNode()==null) {
+                        parent.setRightNode(null);
+                    }
+                    else if(bantu.getRightNode()==null){
+                        parent.setRightNode(bantu.getLeftNode());
+                    }
+                    else if(bantu.getLeftNode()==null){
+                        parent.setRightNode(bantu.getRightNode());
+                    }
+                }
+            }
+        }
+        return bantu;
+    }
 }
