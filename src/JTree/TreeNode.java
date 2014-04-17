@@ -1,15 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package JTree;
-
-/**
- *
- * @author rai
- */
 public class TreeNode {
     private int data;
     private TreeNode leftNode, rightNode;
@@ -20,6 +9,13 @@ public class TreeNode {
         this.leftNode=rightNode=null;
     }
 
+    public TreeNode(int data, TreeNode parent){
+        this.data = data;
+        this.leftNode = null;
+        this.rightNode = null;
+        this.parent = parent;
+    }
+    
     public int getData() {
         return data;
     }

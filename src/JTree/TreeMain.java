@@ -1,26 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package JTree;
 
-/**
- *
- * @author rai
- */
 public class TreeMain {
     public static void main(String[] args) {
         Tree t=new Tree();
-        t.add(34);
-        t.add(23);
-        t.add(7);
-        t.add(98);
-        t.add(45);
-        t.add(67);
-        t.add(32);
-        t.add(8);
+        t.insertNode(34);
+        t.insertNode(23);
+        t.insertNode(7);
+        t.insertNode(98);
+        t.insertNode(45);
+        t.insertNode(67);
+        t.insertNode(32);
+        t.insertNode(8);
+        t.insertNode(90);
+        t.insertNode(56);
         t.inOrderTraversal();
         System.out.println("");
 //        t.postOrderTraversal();
@@ -35,12 +27,13 @@ public class TreeMain {
 //        else System.out.println("Node tidak ditemukan");
 //        
 //        hasil=t.find(9);
-//        if (hasil!=null) {
+//        if (hasil!=nsysull) {
 //            System.out.println("Node ditemukan");
 //        }
 //        else System.out.println("Node tidak ditemukan");
         
-        t.remove(32);
+        int data=32;
+        t.delete(data);
         t.inOrderTraversal();
     }
 }
