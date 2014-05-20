@@ -170,10 +170,10 @@ public class Tree {
                         parent.setLeftNode(bantu.getRightNode());
                     } else {
                         bantu = getSuccessor(bantu);
-                        TreeNode parentPredesesor = bantu.getParent();
+                        TreeNode parentSuc = bantu.getParent();
                         bantu.setData(bantu.getData());
-                        if (parentPredesesor != bantu) {
-                            parentPredesesor.setLeftNode(bantu.getLeftNode());
+                        if (parentSuc != bantu) {
+                            parentSuc.setLeftNode(bantu.getLeftNode());
                         }
                     }
                 } else {
@@ -185,10 +185,10 @@ public class Tree {
                         parent.setRightNode(bantu.getRightNode());
                     } else {
                         bantu = getSuccessor(bantu);
-                        TreeNode parentPredesesor = bantu.getParent();
+                        TreeNode parentSuc = bantu.getParent();
                         bantu.setData(bantu.getData());
-                        if (parentPredesesor != bantu) {
-                            parentPredesesor.setLeftNode(bantu.getLeftNode());
+                        if (parentSuc != bantu) {
+                            parentSuc.setLeftNode(bantu.getLeftNode());
                         }
                     }
                 }
@@ -244,4 +244,11 @@ public class Tree {
     public void setRoot(TreeNode root) {
         this.root = root;
     }
+//    
+//    public void rotationRight(){        
+//        int y=root.getData();
+//        TreeNode x=root.getLeftNode();
+//        
+//        y.
+//    }
 }
