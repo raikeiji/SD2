@@ -1,21 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package graph;
 
-/**
- *
- * @author rai
- */
 public class vertex {
-    private String label;
-    private boolean flagVisited;
+
+    String label;
+    boolean flagVisited;
+
+    public vertex() {
+    }
 
     public vertex(String label) {
-    this.label=label;
+        this.label = label;
+        flagVisited = false;
+    }
+
+    public boolean isFlagVisited() {
+        return flagVisited;
+    }
+
+    public void setFlagVisited(boolean flagVisited) {
+        this.flagVisited = flagVisited;
     }
 
     public String getLabel() {
@@ -25,5 +28,4 @@ public class vertex {
     public void setLabel(String label) {
         this.label = label;
     }
-    
 }

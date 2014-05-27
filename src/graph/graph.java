@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package graph;
 
-/**
- *
- * @author rai
- */
 public class graph {
 
     private int maxVertex = 10;
@@ -53,8 +44,8 @@ public class graph {
         }
         for (int i = 0; i < countvertex; i++) {
             for (int j = 0; j < countvertex; j++) {
-//                System.out.print(adjacencyMatrix[i][j] + " ");
-                System.out.println(vertexList[i].getLabel() + " Terhubung dengan " + vertexList[j].getLabel() + " Dengan beban " + adjacencyMatrix[i][j]);
+                System.out.println(vertexList[i].getLabel() + " Terhubung dengan "
+              + vertexList[j].getLabel() + " Dengan beban " + adjacencyMatrix[i][j]);
             }
 
             System.out.println(" ");
@@ -93,4 +84,21 @@ public class graph {
         this.countvertex = countvertex;
     }
 
+    public void dfs() {
+        Stack st = new Stack();
+        int bantu;
+        st.push(0);
+        while (!st.isEmpty()) {
+            bantu = st.pop();
+            if (vertexList[bantu].flagVisited == false) {
+                System.out.print(vertexList[bantu].label + " ");
+                vertexList[bantu].flagVisited = true;
+            }
+            for (int i = countvertex - 1; i > 0; i--) {
+                if (adjacencyMatrix[bantu][i] >= 1 && vertexList[i].flagVisited == false) {
+                    st.push(i);
+                }
+            }
+        }
+    }
 }
